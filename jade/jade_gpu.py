@@ -68,7 +68,7 @@ def pad(A):
         padflag: bool
             indicator of whether padding was applied
     """
-    if A.shape[1] % 2 is not 0:
+    if A.shape[1] % 2 != 0:
         pad_flag = 1
         j, k = A.shape[0], A.shape[1]
         zers1 = th.zeros((j, k)).reshape(j, k, 1)
